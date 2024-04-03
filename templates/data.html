@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello, Flask</title>
+    </head>
+    <body>
+        <h1>Data</h1>
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/form">Add Data</a></li>
+            <li><a href="/data">Show Data</a></li>
+            <li><a href="/hello">Hello</a></li>
+        </ul>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
